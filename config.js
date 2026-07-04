@@ -1,0 +1,5 @@
+module.exports = {
+  BOT_TOKEN: "8933595798:AAEPDfWPPenaCaQ3S0Uhre7AcPwF1ahokLM",
+  ADMIN_ID: 7146676054,
+  GROUP_ID: "-5329620118",
+};
