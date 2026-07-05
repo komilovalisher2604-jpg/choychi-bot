@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choychi Premium</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <section class="screen active" id="languageScreen">
+    <div class="brand-box">
+      <h1>CHOYCHI PREMIUM</h1>
+      <p>Tilni tanlang</p>
+      <span>Выберите язык</span>
+    </div>
+
+    <button class="main-btn" onclick="setLanguage('uz')">🇺🇿 O'zbek</button>
+    <button class="main-btn" onclick="setLanguage('ru')">🇷🇺 Русский</button>
+  </section>
+
+  <section class="screen" id="homeScreen">
+    <div class="hero">
+      <h1>CHOYCHI PREMIUM</h1>
+      <p id="welcomeText">Xush kelibsiz</p>
+    </div>
+
+    <div class="grid" id="categoryGrid"></div>
+  </section>
+
+  <section class="screen" id="productsScreen">
+    <div class="topbar">
+      <button onclick="goHome()">←</button>
+      <h2 id="categoryTitle"></h2>
+    </div>
+
+    <div class="products" id="productsList"></div>
+  </section>
+
+  <section class="screen" id="cartScreen">
+    <div class="topbar">
+      <button onclick="goHome()">←</button>
+      <h2 id="cartTitle">Savat</h2>
+    </div>
+
+    <div id="cartItems"></div>
+    <div class="total" id="cartTotal"></div>
+
+    <button class="main-btn" onclick="openCheckout()" id="checkoutBtn">
+      Buyurtma berish
+    </button>
+  </section>
+
+  <section class="screen" id="checkoutScreen">
+    <div class="topbar">
+      <button onclick="openCart()">←</button>
+      <h2 id="checkoutTitle">Buyurtma</h2>
+    </div>
+
+    <button class="main-btn" onclick="selectOrderType('delivery')" id="deliveryBtn">
+      🚚 Yetkazib berish
+    </button>
+
+    <button class="main-btn" onclick="selectOrderType('pickup')" id="pickupBtn">
+      🛍 Olib ketish
+    </button>
+
+    <div id="checkoutInfo"></div>
+  </section>
+
+</div>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
